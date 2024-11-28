@@ -1,0 +1,131 @@
+/* General styles for the form */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa; /* Light background for the form page */
+}
+
+main.container {
+    max-width: 800px;
+    margin-top: 200px;
+    padding-top: 30vh;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Form heading */
+h1 {
+    color: var(--primary-gold);
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+/* Form labels */
+label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Form inputs */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="file"],
+input[type="tel"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="file"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--primary-blue);
+    outline: none;
+}
+
+/* Textarea styling */
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* File input field */
+.form-control-file {
+    padding: 10px;
+}
+
+/* Button */
+.btn-primary {
+    background-color: var(--primary-gold);
+    border-color: var(--primary-gold);
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-gold);
+    border-color: var(--primary-gold);
+    color: #fff;
+}
+
+/* Contact Information Section */
+h3 {
+    color: var(--primary-gold);
+    margin-top: 30px;
+}
+
+/* Styling for form descriptions */
+.form-text {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* Image Upload Section */
+input[type="file"] {
+    cursor: pointer;
+    padding: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .btn-primary {
+        font-size: 1rem;
+    }
+}
+
+/* Edit Form */
+.delete-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: darkred;
+}

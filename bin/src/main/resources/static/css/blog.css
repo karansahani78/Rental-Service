@@ -1,0 +1,118 @@
+/* CSS Reset for Basic Spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Body Style */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Banner Styles */
+.banner-image {
+    height: 15vh; /* Further reduce the height */
+    background-image: url('../images/banner.jpg');
+    background-color: var(--primary-blue);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    
+}
+
+/* Title within Banner */
+.gen-page-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container Spacing */
+.container {
+    margin-top: 1rem !important; /* Ensure space below banner */
+    padding-top: 0 !important; /* Remove any extra padding from the top */
+}
+
+/* Main Heading Style */
+h1 {
+    font-size: 2rem;
+    margin: 1rem 0; /* Controlled margin below the main heading */
+}
+
+/* Image Placeholder for Articles */
+.img-placeholder {
+    width: 100px;
+    height: 80px;
+    background-color: #ADD8E6;
+    display: inline-block;
+}
+
+/* Media Card Styling */
+.media {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Muted Text Styling */
+.text-muted {
+    font-size: 0.9rem;
+}
+
+/* Search Section Styling */
+.border.p-4 {
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 1rem; /* Adjust padding for better balance */
+}
+
+/* Button Styling */
+.btn.btn-dark.btn-block {
+    background-color: #333;
+    border-radius: 5px;
+}
+.col-md-8,.col-md-4 {
+    margin-top: 10rem !important;
+}
+/* General Article Card Styling */
+.article-card {
+    background-color: #fff;
+    border-color: #ddd;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Placeholder Styling */
+.img-placeholder {
+    width: 100px;
+    height: 80px;
+    background-color: #ADD8E6;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+/* Title and Date Styling */
+.article-card h5 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.article-card .text-muted {
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+}

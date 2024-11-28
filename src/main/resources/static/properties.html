@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Properties</title>
+    <!-- Bootstrap 4 CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/colors.css">
+    <link rel="stylesheet" href="../css/search_filter.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+    <script src="../js/insert_head_foot.js"></script>
+
+    <!-- Main Content Section with Sidebar -->
+    <main class="container mt-5">
+        <div class="row">
+            <!-- Search Sidebar -->
+            <aside id="search-sidebar-placeholder" class="col-lg-3 col-md-4">
+                <!-- Search filter content will be loaded here -->
+            </aside>
+    
+            <!-- Property Listings Section -->
+            <section class="property-listings col-lg-9 col-md-8">
+                <h1 class="text-center mb-5">Available Listings</h1>
+                <div class="row" id="listings-section">
+                    <!-- Listings will be generated dynamically by listings.js -->
+                </div>
+            </section>
+        </div>
+    </main>
+    
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Load search filter dynamically -->
+    <script>
+        fetch('search_filter.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('search-sidebar-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading search filter:', error));
+    </script>
+
+    <!-- Load Listings and Footer -->
+    <script src="../js/listings.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

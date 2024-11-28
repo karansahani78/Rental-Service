@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum</title>
+    <link rel="stylesheet" href="../css/forum.css">
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+<script src="../js/insert_head_foot.js"></script>
+
+<main class="container forum-section">
+    <div class="row">
+        <!-- Topics Section -->
+        <div class="col-md-8">
+            <h1>Topics</h1>
+            <div class="forum-card">
+                <h5>Beyond Technology: The Conciliable Conference and Its Cultural Influence</h5>
+                <div class="d-flex align-items-center text-muted mb-2">
+                    <span class="mr-3"><i class="fas fa-user"></i> Admin Admin</span>
+                    <span class="mr-3"><i class="fas fa-calendar"></i> Aug. 14, 2024, 11:28 p.m.</span>
+                    <span><i class="fas fa-comments"></i> 1 comment</span>
+                </div>
+                <p>Exploring the topic: Beyond Technology: The Conciliable Conference and Its Cultural Influence.</p>
+            </div>
+            <!-- Write js to generate more forum items -->
+        </div>
+
+        <!-- Post a Topic Section -->
+        <div class="col-md-4">
+            <div class="post-topic">
+                <h5>Post a Topic</h5>
+                <form>
+                    <div class="mb-3">
+                        <label for="title" class="form-label">Title</label>
+                        <input type="text" class="form-control" id="title" placeholder="Enter title">
+                    </div>
+                    <div class="mb-3">
+                        <label for="topic" class="form-label">Topic</label>
+                        <textarea class="form-control" id="topic" rows="4" placeholder="Enter topic"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+
+<div id="footer-placeholder"></div>
+</body>
+</html>

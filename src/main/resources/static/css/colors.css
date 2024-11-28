@@ -1,0 +1,13 @@
+/* file colors.css */
+:root {
+    --primary-black: #1A1C21;     /* rgb(26 28 33) */
+    --primary-gold: #C6A366;    /* rgb(198 163 102) */
+    --primary-blue: #0790BA;   /* rgb(7 144 186) */
+    --secondary-black: #303237; 
+    --secondary-gold: #ceb07b;
+    --secondary-blue: #24a2c5;
+    --background-color: #fffbf3;
+    --text-color: #1A1C21;
+    --primary-font: 'Product Sans', sans-serif;
+    --secondary-font: 'Poppins', sans-serif;
+}

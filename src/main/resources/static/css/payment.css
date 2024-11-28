@@ -1,0 +1,110 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+header {
+    margin-bottom: 20px;
+}
+
+/* Main Container Styling */
+main.container {
+    max-width: 800px;
+    margin-top: 200px;
+    padding-top: 30vh;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+
+
+/* Heading Styling */
+h1 {
+    color: var(--primary-gold);
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #343a40;
+}
+
+h3 {
+    color: #6c757d;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+/* Payment Details Styling */
+#payment-details {
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+/* Form Styling */
+form#payment-form {
+    margin-top: 20px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    color: #343a40;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary-gold);
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+/* Button Styling */
+#pay-now {
+    padding: 12px 25px;
+    background-color: var(--primary-gold);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--primary-gold);
+}
+
+.btn:active {
+    background-color: var(--primary-gold);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    main.container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}

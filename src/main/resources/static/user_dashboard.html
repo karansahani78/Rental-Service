@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <!-- Bootstrap 4 CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/colors.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+    <script src="../js/insert_head_foot.js"></script>
+
+    <!-- Main Content Section -->
+    <main class="container mt-5">
+        <div class="row">
+            <section class="col-12">
+                <h1 class="text-center mb-5">My Dashboard</h1>
+
+                <!-- User Information -->
+                <div class="card mb-4">
+                    <div class="card-body user-info-card">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p><strong class="field-label">Name:</strong> <span id="user-name"></span></p>
+                                <p><strong class="field-label">Email:</strong> <span id="user-email"></span></p>
+                            </div>
+                            <div class="col-md-6">
+                                <p><strong class="field-label">Phone:</strong> <span id="user-phone"></span></p>
+                                <p><strong class="field-label">Subscription Tier:</strong> <span id="user-tier"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <!-- Properties Section -->
+                <h2 class="text-center mb-4">My Properties</h2>
+                <div class="row" id="user-properties-section">
+                    <!-- User's properties will be dynamically populated -->
+                </div>
+            </section>
+        </div>
+
+        <!-- Logout Button -->
+        <div class="text-center mt-5">
+            <button class="btn btn-danger" id="logout-button">Logout</button>
+        </div>
+
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../js/user_dashboard.js"></script>
+</body>
+</html>

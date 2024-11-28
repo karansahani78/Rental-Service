@@ -1,0 +1,62 @@
+INSERT INTO Addresses (street, city, state, postal_code, country) VALUES
+    ('123 Main St', 'New York', 'NY', '10001', 'USA'),
+    ('456 Elm St', 'Los Angeles', 'CA', '90001', 'USA'),
+    ('789 Oak Ave', 'Chicago', 'IL', '60601', 'USA'),
+    ('101 Pine Rd', 'Houston', 'TX', '77001', 'USA'),
+    ('202 Maple Ln', 'Phoenix', 'AZ', '85001', 'USA');
+
+INSERT INTO Users (address_id, first_name, last_name, email, password, phone_number, user_type) VALUES
+    (1, 'John', 'Doe', 'john.doe@example.com', 'hashedpassword1', '1234567890', 'buyer'),
+    (2, 'Jane', 'Smith', 'jane.smith@example.com', 'hashedpassword2', '2345678901', 'seller'),
+    (3, 'Alice', 'Johnson', 'alice.johnson@example.com', 'hashedpassword3', '3456789012', 'agent'),
+    (4, 'Bob', 'Brown', 'bob.brown@example.com', 'hashedpassword4', '4567890123', 'buyer'),
+    (5, 'Charlie', 'Davis', 'charlie.davis@example.com', 'hashedpassword5', '5678901234', 'other');
+
+INSERT INTO Properties (user_id, title, description, property_type, price, area_sq_ft, bedrooms, bathrooms, address_id, status) VALUES
+    (2, 'Cozy Apartment', 'A beautiful apartment in the heart of the city', 'apartment', 250000.00, 1000.00, 2, 1, 1, 'available'),
+    (2, 'Spacious House', 'Large family home with a backyard', 'house', 500000.00, 2500.00, 4, 3, 2, 'available'),
+    (3, 'Modern Condo', 'Sleek condo with amazing views', 'condo', 350000.00, 1200.00, 2, 2, 3, 'pending'),
+    (3, 'Commercial Space', 'Prime location for your business', 'commercial', 750000.00, 5000.00, 0, 2, 4, 'available'),
+    (2, 'Vacation Home', 'Perfect getaway near the beach', 'house', 400000.00, 1800.00, 3, 2, 5, 'available');
+
+INSERT INTO SubscriptionTiers (tier_name, price, tagline) VALUES
+    ('Basic', 9.99, 'Essential features for casual users'),
+    ('Premium', 19.99, 'Advanced features for serious buyers and sellers'),
+    ('Pro', 29.99, 'Full access for real estate professionals'),
+    ('Enterprise', 99.99, 'Custom solutions for large agencies'),
+    ('Student', 4.99, 'Discounted tier for students');
+
+INSERT INTO SubscriptionFeatures (feature_name, description) VALUES
+    ('Listing Creation', 'Ability to create property listings'),
+    ('Advanced Search', 'Access to advanced search filters'),
+    ('Virtual Tours', 'Create and view virtual property tours'),
+    ('Market Analysis', 'In-depth market trend analysis tools'),
+    ('Priority Support', '24/7 priority customer support');
+
+INSERT INTO SubscriptionTierFeatures (tier_id, feature_id) VALUES
+    (1, 1),
+    (2, 1),
+    (2, 2),
+    (3, 1),
+    (3, 2),
+    (3, 3),
+    (4, 1),
+    (4, 2),
+    (4, 3),
+    (4, 4),
+    (4, 5),
+    (5, 1);
+
+INSERT INTO UserFinancialInfo (user_id, card_holder_name, card_number, card_type, expiration_date, billing_address_id, cvv_code) VALUES
+    (1, 'John Doe', '1234567890123456', 'Visa', '2025-12-31', 1, '123'),
+    (2, 'Jane Smith', '2345678901234567', 'MasterCard', '2026-11-30', 2, '234'),
+    (3, 'Alice Johnson', '3456789012345678', 'Amex', '2024-10-31', 3, '3456'),
+    (4, 'Bob Brown', '4567890123456789', 'Discover', '2027-09-30', 4, '456'),
+    (5, 'Charlie Davis', '5678901234567890', 'Visa', '2025-08-31', 5, '567');
+
+INSERT INTO Reviews (user_id, property_id, rating, comment) VALUES
+    (1, 1, 5, 'Excellent apartment, great location!'),
+    (4, 2, 4, 'Spacious house, but needs some minor repairs.'),
+    (1, 3, 5, 'Amazing condo with stunning views.'),
+    (4, 4, 3, 'Good commercial space, but limited parking.'),
+    (1, 5, 4, 'Lovely vacation home, close to amenities.');

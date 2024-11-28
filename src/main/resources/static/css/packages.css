@@ -1,0 +1,115 @@
+/* Reset Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #000000;
+    margin: 0;
+}
+
+/* Banner Styles */
+.banner-image {
+    height: 30vh;
+    background-image: url('../images/banner.jpg');
+    background-color: var(--primary-blue); 
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 1rem; /* Add bottom padding to prevent overlap */
+}
+
+.gen-page-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Main Content */
+main.container {
+    margin-top: 0;
+    padding-top: 30vh; /* Adjust top padding as necessary */
+}
+
+/* Adjust Space Below Main Heading */
+.text-center.mb-5 {
+    margin-bottom: 2rem;
+    margin-top: 2rem; 
+}
+.display-4{
+    font-size: 2.5rem !important; 
+    font-weight:500 !important;
+}
+
+/* Card Styles */
+.card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid transparent;
+}
+
+.card:hover {
+    transform: scale(1.06);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border-color: #ffbf47;
+}
+
+/* Gradient Backgrounds */
+.bg-gradient-primary {
+    background: linear-gradient(135deg, var(--primary-black), var(--primary-blue));
+    color: white;
+}
+.bg-gradient-success {
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-black));
+    color: white;
+}
+.bg-gradient-info {
+    background: linear-gradient(135deg, var(--primary-black), var(--primary-blue));
+    color: white;
+}
+
+/* Price and Title Styling */
+.price-text.mb-0.tier-price {
+    color: var(--primary-gold);
+}
+
+/* Button Styling */
+.custom-btn {
+    background: var(--primary-blue) !important;
+    padding: 12px 30px;
+    text-transform: uppercase;
+    border-radius: 60px;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.custom-btn:hover {
+    background-color: var(--primary-blue) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.custom-btn:active {
+    background-color: var(--primary-blue) !important;
+    transform: translateY(1px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* General Page Title */
+.gen-page-title h1 {
+    margin: 0;
+    padding: 5px 0;
+    font-size: 2rem;
+}
+

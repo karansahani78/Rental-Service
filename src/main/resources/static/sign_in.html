@@ -1,0 +1,68 @@
+<!-- file sign_in.html -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="../css/sign_in.css">
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+<script src="../js/insert_head_foot.js"></script>
+
+
+<main class="container my-5">
+    <div class="row">
+        <!-- Left side: Sign-in form -->
+        <div class="col-md-6">
+            <h3 class="mb-4">Sign in</h3>
+            <form action="/users/login" method="POST">
+                <div class="form-group">
+                    <label for="username">Username *</label>
+                    <input type="text" id="username" name="email" class="form-control" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password *</label>
+                    <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password" required>
+                </div>
+                <a href="#" class="d-block mb-3">Recover password</a>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+            
+        </div>
+
+        <!-- Right side: Sign-up section -->
+        <div class="col-md-6 text-center d-flex flex-column align-items-center justify-content-center">
+            <h3 class="mb-4">New user?</h3>
+            <a href="sign_up.html" class="btn btn-warning">Create an account</a>
+        </div>
+    </div>
+</main>
+
+<div id="footer-placeholder"></div>
+
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('error')) {
+        const error = urlParams.get('error');
+        let message = '';
+        if (error === 'invalid_credentials') {
+            message = "Invalid username or password.";
+        } else if (error === 'not_logged_in') {
+            message = "Please log in to continue.";
+        }
+        if (message) {
+            const errorMessage = document.createElement('p');
+            errorMessage.textContent = message;
+            errorMessage.style.color = "red";
+            document.querySelector('form').prepend(errorMessage);
+        }
+    }
+</script>
+
+
+</body>
+</html>

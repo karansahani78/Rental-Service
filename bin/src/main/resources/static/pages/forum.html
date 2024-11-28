@@ -1,0 +1,88 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom Colors CSS -->
+    <link rel="stylesheet" href="colors.css">
+    <link rel="stylesheet" href="../css/forum.css">
+</head>
+<body>
+
+<!-- Header Placeholder -->
+<div id="header-placeholder"></div>
+
+<script>
+    // Load header content from header.html
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading header:', error));
+</script>
+
+<main class="container forum-section">
+    <div class="row">
+        <!-- Topics Section -->
+        <div class="col-md-8">
+            <h1>Topics</h1>
+            <div class="forum-card">
+                <h5>Beyond Technology: The Conciliable Conference and Its Cultural Influence</h5>
+                <div class="d-flex align-items-center text-muted mb-2">
+                    <span class="mr-3"><i class="fas fa-user"></i> Admin Admin</span>
+                    <span class="mr-3"><i class="fas fa-calendar"></i> Aug. 14, 2024, 11:28 p.m.</span>
+                    <span><i class="fas fa-comments"></i> 1 comment</span>
+                </div>
+                <p>Exploring the topic: Beyond Technology: The Conciliable Conference and Its Cultural Influence.</p>
+            </div>
+            <!-- Add more forum cards here if needed -->
+        </div>
+
+        <!-- Post a Topic Section -->
+        <div class="col-md-4">
+            <div class="post-topic">
+                <h5>Post a Topic</h5>
+                <form>
+                    <div class="mb-3">
+                        <label for="title" class="form-label">Title</label>
+                        <input type="text" class="form-control" id="title" placeholder="Enter title">
+                    </div>
+                    <div class="mb-3">
+                        <label for="topic" class="form-label">Topic</label>
+                        <textarea class="form-control" id="topic" rows="4" placeholder="Enter topic"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Footer Placeholder -->
+<div id="footer-placeholder"></div>
+
+<script>
+    // Load footer content from footer.html
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading footer:', error));
+</script>
+
+<!-- Font Awesome for Icons -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+
+<!-- jQuery (required for Bootstrap 4) -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<!-- Popper.js (required for Bootstrap 4 dropdowns, tooltips, etc.) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Bootstrap 4 JavaScript -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

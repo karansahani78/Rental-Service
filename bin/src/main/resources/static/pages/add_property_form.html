@@ -1,0 +1,69 @@
+<!-- file add_property_form.html -->
+
+<div id="header-placeholder"></div>
+
+<script>
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+
+            // Change the title based on the page
+            const pageTitle = document.querySelector('h1#change-title');
+            if (pageTitle) {
+                pageTitle.textContent = 'ADD PROPERTY'; 
+            }
+        })
+        .catch(error => console.error('Error loading footer:', error));
+</script>
+
+<main class="policy-main">
+    <!-- Listings Section -->
+    <section class="policy-section">
+        <h3>Add a Property</h3>
+        <p> Placeholder</p>
+    </section>
+
+</main>
+
+<div id="footer-placeholder"></div>
+
+<script>
+    
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading footer:', error));
+</script>
+<script>
+    $(document).ready(function(){
+        // Enable hover behavior for dropdowns
+        $('.nav-item.dropdown').hover(
+            function() {
+                $(this).addClass('show');
+                $(this).find('.dropdown-menu').addClass('show');
+            }, 
+            function() {
+                $(this).removeClass('show');
+                $(this).find('.dropdown-menu').removeClass('show');
+            }
+        );
+
+        // Bootstrap's default click behavior still works
+        $('.dropdown-toggle').dropdown();
+    });
+</script>
+
+<!-- jQuery (required for Bootstrap 4) -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<!-- Popper.js (required for Bootstrap 4 dropdowns, tooltips, etc.) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Bootstrap 4 JavaScript -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

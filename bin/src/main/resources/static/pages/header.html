@@ -1,0 +1,70 @@
+<!-- header.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/head-footer-style.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/colors.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Property Connect</title>
+</head>
+<body>
+    <header class="header header1" id="top">
+        <!-- Main Navigation Menu -->
+        <div class="nav-wrapper">
+            <nav class="main-nav container">
+                <a href="index.html">
+                    <img class="logo" src="../images/logo.png" alt="Logo" style="height: 40px;">
+                </a>
+                <ul class="nav-options">
+                    <li class="nav-item"><a href="index.html" class="sl">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle sl" id="propertyDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                            Property
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="propertyDropdown">
+                            <!-- Navigation links with filter parameters -->
+                            <li><a class="dropdown-item" href="properties.html?type=rent">For Rent</a></li>
+                            <li><a class="dropdown-item" href="properties.html?type=lease">For Lease</a></li>
+                            <li><a class="dropdown-item" href="properties.html?type=new">New Constructions</a></li>
+                            <li><a class="dropdown-item" href="properties.html?type=student">Student Relocation</a></li>
+                            <li><a class="dropdown-item" href="properties.html?type=professional">Professionals Relocation</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle sl" id="servicesDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="services.html">Our Services</a></li>
+                            <li><a class="dropdown-item" href="affiliates.html">Affiliates</a></li>
+                            <li><a class="dropdown-item" href="forum.html">Forum</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="packages.html" class="sl">Packages</a></li>
+                    <li class="nav-item"><a href="blog.html" class="sl">Blog</a></li>
+                    <li class="nav-item"><a href="contact.html" class="sl">Contact Us</a></li>
+                </ul>
+                <div class="add-property-btn">
+                    <a href="add_property_form.html" style="background-color: var(--primary-gold); color: #fff;">Add Property</a>
+                </div>
+            </nav>
+            <!-- User Icon -->
+            <a href="sign_up.html">
+                <div class="user-icon">
+                    <i class="fas fa-user"></i>
+                </div>
+            </a>
+        </div>
+
+    <!-- Header Image Section -->
+    <div class="banner-image" id="banner-image-section">
+        <div class="gen-page-title">
+            <!-- <h1 id="change-title">TERMS AND CONDITIONS</h1> -->
+        </div>
+    </div>
+</body>
+</html>

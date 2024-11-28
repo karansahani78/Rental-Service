@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Tiers</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .card {
+            height: 100%; /* Make all cards the same height */
+            display: flex;
+            flex-direction: column; /* Stack content vertically */
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scaling and shadow transition */
+            cursor: pointer; /* Change cursor to pointer for interactivity */
+        }
+
+        /* Zoom in on hover */
+        .card:hover {
+            transform: scale(1.05); /* Enlarge the card */
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+        }
+
+        /* Click effect */
+        .card.clicked {
+            transform: rotateY(10deg); /* Slightly rotate the card on click */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Reduce shadow on click */
+        }
+
+        .custom-btn {
+            background-color: #d81f7c !important; /* Set background color */
+            color: white !important; /* Change text color to white for better contrast */
+            border: none !important; /* Remove border */
+            padding: 10px 20px; /* Padding for the button */
+            margin-top: auto; /* Push button to the bottom of the card */
+        }
+
+        .custom-btn:hover {
+            background-color: #9f084e !important; /* Darker shade on hover */
+        }
+
+        .btn-container {
+            display: flex; /* Use flexbox for centering */
+            justify-content: center; /* Center the button */
+            margin: 10px 0; /* Add some margin for uniform spacing */
+        }
+
+        .features-container {
+            display: flex; /* Use flexbox to align items */
+            flex-direction: column; /* Stack features vertically */
+            flex-grow: 1; /* Make features container take up available space */
+            justify-content: flex-start; /* Align items at the start */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+
+        .features-container h5 {
+            margin: 5px 0; /* Adjust margin for the features heading */
+        }
+
+        .features-container ul {
+            margin: 0; /* Remove margin from the list */
+            padding: 0; /* Remove padding from the list */
+            list-style-type: none; /* Remove bullet points */
+        }
+
+        .space-after {
+            margin-bottom: 5px; /* Adjust space after "Select" text if needed */
+        }
+
+        /* Custom shadow style */
+        .shadow {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+        }
+
+        .header-text {
+            text-align: center; /* Center text */
+            padding: 5px; /* Padding around the text */
+            margin: 0; /* Remove margin */
+            font-size: 1.1em; /* Adjust font size (smaller than before) */
+        }
+
+        .price-text {
+            color: #d81f7c; /* Price color to match button */
+            font-size: 2em; /* Adjust font size as needed */
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div id="header"></div>
+    <main class="container my-5">
+        <!-- Main Heading -->
+        <div class="text-center mb-5">
+            <h1 class="display-4"><b>Our Pricing Tiers</b></h1>
+        </div>
+
+        <div class="row" id="card-container">
+            <!-- Tier 1 -->
+            <div class="col-md-4">
+                <div class="card border-primary mb-4 shadow">
+                    <div class="card-header text-center">
+                        <h2 class="header-text">Tier 1</h2>
+                        <h2 class="price-text mb-0">$75</h2>
+                        <h4 class="header-text" style="background-color: transparent;">per month</h4> <!-- Removed background color -->
+                    </div>
+                    <div class="card-body features-container">
+                        <p class="card-text">Perfect for those trying the system for the first time.</p>
+                        <div class="btn-container">
+                            <a href="link_to_tier1.html" class="btn custom-btn">Select</a>
+                        </div>
+                        <h5>Features:</h5>
+                        <ul class="list-unstyled">
+                            <li>• Listing placement on the site.</li>
+                            <li>• Personal identification number (PIN).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tier 2 -->
+            <div class="col-md-4">
+                <div class="card border-success mb-4 shadow">
+                    <div class="card-header text-center">
+                        <h2 class="header-text">Tier 2</h2>
+                        <h2 class="price-text mb-0">$150</h2>
+                        <h4 class="header-text" style="background-color: transparent;">per month</h4> <!-- Removed background color -->
+                    </div>
+                    <div class="card-body features-container">
+                        <p class="card-text">For those looking to target a specific audience.</p>
+                        <div class="btn-container">
+                            <a href="link_to_tier2.html" class="btn custom-btn">Select</a>
+                        </div>
+                        <h5>Features:</h5>
+                        <ul class="list-unstyled">
+                            <li>• Listing placement on the site.</li>
+                            <li>• Personal identification number (PIN).</li>
+                            <li>• Access to over 15,000 viewers worldwide.</li>
+                            <li>• Presence on social media accounts.</li>
+                            <li>• Bi-weekly stats on views.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tier 3 -->
+            <div class="col-md-4">
+                <div class="card border-info mb-4 shadow">
+                    <div class="card-header text-center">
+                        <h2 class="header-text">Tier 3</h2>
+                        <h2 class="price-text mb-0">$300</h2>
+                        <h4 class="header-text" style="background-color: transparent;">per month</h4> <!-- Removed background color -->
+                    </div>
+                    <div class="card-body features-container">
+                        <p class="card-text">For international real estate agents looking to connect with agents and clients worldwide.</p>
+                        <div class="btn-container">
+                            <a href="link_to_tier3.html" class="btn custom-btn">Select</a>
+                        </div>
+                        <h5>Features:</h5>
+                        <ul class="list-unstyled">
+                            <li>• Listing placement on the site.</li>
+                            <li>• Personal identification number (PIN).</li>
+                            <li>• Access to over 15,000 viewers worldwide.</li>
+                            <li>• Presence on social media accounts.</li>
+                            <li>• Bi-weekly stats on views.</li>
+                            <li>• Weekly boost to the top of the page for more viewership.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        // Load header
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data; // Corrected to match the id
+            })
+            .catch(error => console.error('Error loading header:', error));
+
+        // Load footer
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data; // Corrected to match the id
+            })
+            .catch(error => console.error('Error loading footer:', error));
+
+        // Click effect for cards
+        $(document).ready(function() {
+            $('.card').on('click', function() {
+                const card = $(this);
+
+                // Remove the 'clicked' class from all cards and add to the clicked one
+                $('.card').removeClass('clicked');
+                card.addClass('clicked');
+
+                // Remove the clicked class after a short delay for the effect to show
+                setTimeout(() => {
+                    card.removeClass('clicked');
+                }, 300);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        
+        .contact-section {
+            padding: 20px;
+            background-color: #f5f7f9;
+        }
+
+        .contact-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .contact-info {
+            max-width: 250px;
+            text-align: center;
+        }
+
+        .contact-logo {
+            width: 100%;
+            max-width: 150px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+        }
+
+        .contact-info a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .social-icons a {
+            color: #333;
+            font-size: 20px;
+        }
+
+        .contact-form {
+            flex-grow: 1;
+            margin-left: 40px;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .contact-form h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .form-group input, .form-group textarea {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .submit-button {
+            background-color: #f1a078;
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .submit-button:hover {
+            background-color: #e18c5e;
+        }
+    </style>
+    
+    <!-- jQuery and Bootstrap 4 -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+
+                // Change the title based on the page
+                const pageTitle = document.querySelector('h1#change-title');
+                if (pageTitle) {
+                    pageTitle.textContent = 'CONTACT US'; 
+                }
+            })
+            .catch(error => console.error('Error loading header:', error));
+    </script>
+    
+    <main class="policy-main">
+        <!-- Contact Us Section -->
+        <section class="contact-section">
+            <div class="contact-container">
+                <!-- Left Side: Logo and Contact Information -->
+                <div class="contact-info">
+                    <img src="../images/logo.png" alt="Property Connect Logo" class="contact-logo">
+                    <p><i class="fas fa-map-marker-alt"></i> None, </p>
+                    <p><i class="fas fa-phone-alt"></i> +1 (647) 444-0058</p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:contact@your1propertyconnect.com">contact@your1propertyconnect.com</a></p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+    
+                <!-- Right Side: Contact Form -->
+                <div class="contact-form">
+                    <h3>SEND US A MESSAGE</h3>
+                    <form action="#" method="post">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email ID</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    </script>
+    
+    <script>
+        $(document).ready(function(){
+            // Enable hover behavior for dropdowns
+            $('.nav-item.dropdown').hover(
+                function() {
+                    $(this).addClass('show');
+                    $(this).find('.dropdown-menu').addClass('show');
+                }, 
+                function() {
+                    $(this).removeClass('show');
+                    $(this).find('.dropdown-menu').removeClass('show');
+                }
+            );
+
+            // Bootstrap's default click behavior still works
+            $('.dropdown-toggle').dropdown();
+        });
+    </script>
+</body>
+</html>

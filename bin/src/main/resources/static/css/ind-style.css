@@ -1,0 +1,254 @@
+/* file ind-style.css */
+
+/* Who We Are Section */
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    height: 500px;
+}
+
+.about-left,
+.about-right {
+    width: 48%;
+    height: 100%;
+}
+
+.about-left {
+    background-color: var(--primary-gold);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 50px 10px 50px 50px;
+    padding: 20px;
+    color: var(--primary-black);
+}
+
+.about-left h2 {
+    font-size: 2.5rem;
+}
+
+.about-left p {
+    padding: 40px;
+}
+
+.about-right {
+    position: relative;
+    margin: 50px 50px 50px 10px;
+}
+
+.about-right img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* What We Do Section */
+.what-we-do {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 40px;
+    height: 200px;
+    text-align: center; 
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+.Do-Section h2 {
+    font-size: 2.5rem; 
+    color: var(--primary-gold);
+    margin-bottom: 35px;
+}
+
+.Do-Section p {
+    font-size: 1.4rem;
+    color: var(--primary-black); 
+    margin-top: 10px;
+}
+
+/* What We Do Boxes Section */
+.what-we-do-boxes {
+    display: flex;
+    justify-content: space-around;
+    padding: 70px 70px;
+    gap: 20px;
+}
+
+.service-box {
+    flex: 1;
+    margin: 10px;
+    padding: 5px;
+    position: relative; 
+    background-color: #fff; 
+    text-align: center;
+    z-index: 1; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    height: 900px;
+    border: 4px solid var(--primary-gold); 
+}
+
+/* Adjust the image */
+.service-box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    position: relative;
+    top: 0;
+    left: 0; 
+    z-index: 1; 
+}
+
+.service-box h3, .service-box p, .service-box a {
+    position: relative;
+    z-index: 1; 
+
+}
+
+.service-box h3 {
+    margin-top: 10px;
+    margin-bottom: 70px;
+    font-size: 1rem; 
+    line-height: 1.4; 
+}
+
+.service-box p {
+    font-size: 15px;
+    line-height: 2;
+}
+
+.blue-box h3 {
+    margin-bottom: 50px;
+}
+
+.service-box a {
+    display: inline-block;
+    position: absolute;
+    top: 815px; /* Distance from top of the service box */
+    left: 50%; 
+    transform: translateX(-50%); 
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pink-box a, 
+.dark-box a, 
+.blue-box a {
+    border: 2px solid var(--primary-black); 
+    color: var(--primary-black);
+}
+
+.dark-box a:hover, 
+.blue-box a:hover,
+.pink-box a:hover {
+    border: 2px solid var(--primary-gold);
+    background-color: var(--primary-gold);
+    color: var(--primary-black);
+}
+
+.pink-box,
+.dark-box,
+.blue-box {
+    background: var(--primary-blue);
+    color: var(--primary-black);
+}
+
+/* Contact Form Section */
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 20px;
+    align-items: flex-start;
+    background: #f7f7f7;
+}
+
+.contact-info {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-info h3 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: var(--primary-gold);
+}
+
+.contact-info p {
+    margin: 30px 0;
+    color: var(--primary-black);
+}
+
+.contact-form {
+    flex: 1;
+    margin-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid var(--primary-gold);
+    font-size: 1rem;
+    color: var(--primary-black);
+    outline: none;
+    transition: border 0.3s; 
+    background: #f7f7f7;
+}
+
+.contact-form input:hover,
+.contact-form textarea:hover {
+    border: 2px solid var(--primary-gold);
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"] {
+    width: 48%; 
+}
+
+.contact-form input.subject,
+.contact-form textarea {
+    width: 100%; 
+}
+
+.contact-form textarea {
+    min-height: 150px; 
+}
+
+/* Submit button */
+.contact-form button {
+    width: 100%; 
+    padding: 15px; 
+    background-color: var(--primary-black); 
+    color: var(--primary-gold); 
+    border: none; 
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s; 
+    font-size: 20px;
+}
+
+.contact-form button:hover {
+    background-color: var(--secondary-black); 
+}
+
+
+
+/* Adjust for different screen sizes */
+@media (max-width: 768px) {
+    .go-to-top {
+        bottom: 20px;
+        right: 10px;
+    }
+}
+

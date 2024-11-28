@@ -1,0 +1,65 @@
+<!-- search_filter.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Properties</title>
+    <!-- Link Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Link Custom CSS -->
+    <link rel="stylesheet" href="../css/search_filter.css">
+</head>
+<body>
+    <aside class="search-sidebar p-4">
+        <h4 class="mb-4">Search Properties</h4>
+        <form>
+            <div class="form-group mb-3">
+                <label for="country">Country</label>
+                <select id="country" class="form-control">
+                    <option value="">Select Country</option>
+                </select>
+            </div>
+            <div class="form-group mb-3">
+                <label for="province">Province</label>
+                <select id="province" class="form-control">
+                    <option value="">Select Province</option>
+                </select>
+            </div>
+            <div class="form-group mb-3">
+                <label for="propertyType">Property Type</label>
+                <select id="propertyType" class="form-control">
+                    <option value="">Select Property Type</option>
+                </select>
+            </div>
+            <div class="form-row mb-3">
+                <div class="col">
+                    <label for="beds">Beds</label>
+                    <select id="beds" class="form-control">
+                        <option value="">Beds</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <label for="baths">Baths</label>
+                    <select id="baths" class="form-control">
+                        <option value="">Baths</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group mb-3">
+                <label for="minPrice">Min Price</label>
+                <input type="text" id="minPrice" class="form-control" placeholder="Min Price">
+            </div>
+            <div class="form-group mb-3">
+                <label for="maxPrice">Max Price</label>
+                <input type="text" id="maxPrice" class="form-control" placeholder="Max Price">
+            </div>
+            <div class="form-group mb-4">
+                <label for="searchTerm">Search term</label>
+                <input type="text" id="searchTerm" class="form-control" placeholder="Search term">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Search Now</button>
+        </form>
+    </aside>
+</body>
+</html>

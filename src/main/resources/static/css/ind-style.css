@@ -1,0 +1,312 @@
+/* file ind-style.css */
+
+/* Who We Are Section */
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    height: 500px;
+    margin-top: 150px;
+}
+
+.about-left,
+.about-right {
+    width: 48%;
+    height: 100%;
+}
+
+.about-left {
+    background-color: var(--primary-gold);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 50px 10px 50px 50px;
+    padding: 20px;
+    color: var(--primary-black);
+}
+
+.about-left h2 {
+    font-size: 2.5rem;
+}
+
+.about-left p {
+    padding: 40px;
+}
+
+.about-right {
+    position: relative;
+    margin: 50px 50px 50px 10px;
+    
+}
+
+.about-right img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* What We Do Section */
+.what-we-do {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 40px;
+    height: 200px;
+    text-align: center; 
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+.Do-Section h2 {
+    font-size: 2.5rem; 
+    color: var(--primary-gold);
+    margin-bottom: 35px;
+}
+
+.Do-Section p {
+    font-size: 1.4rem;
+    color: var(--primary-black); 
+    margin-top: 10px;
+}
+
+/* Main section containing all rows */
+.what-we-do-boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+}
+
+/* Each row */
+.service-box {
+    display: flex;
+    height: 500px;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    background-repeat: no-repeat;
+}
+
+/* Gradient layer using ::before */
+.service-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background: linear-gradient(to left, var(--primary-blue) 40%, rgba(0, 0, 0, 0) 90%);
+    pointer-events: none; /* Prevents interfering with text/buttons */
+}
+
+/* Background image for each row */
+.first-box {
+    background-image: url('../images/image2.jpg');
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensures the entire box is filled without stretching */
+}
+
+/* Gradient layer using ::before for the second box */
+.second-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background: linear-gradient(to right, var(--primary-blue) 40%, rgba(0, 0, 0, 0) 90%);
+    pointer-events: none;
+}
+
+/* Background image for the second box */
+.second-box {
+    background-image: url('../images/building 2.webp');
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensures the entire box is filled without stretching */
+    flex-direction: row-reverse; /* Ensure image and text align correctly */
+}
+
+
+.third-box {
+    background-image: url('../images/house.jpg');
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensures the entire box is filled without stretching */
+}
+
+/* Containers inside each row */
+.empty-container {
+    flex: 4;
+}
+
+.text-container {
+    font-family: 'Poppins', sans-serif;
+    flex: 6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    color: #fff;
+    text-align: center;
+    z-index: 2; /* Make sure text is above the gradient */
+}
+
+/* Text styles */
+.text-container h3 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: var(--primary-gold);
+}
+
+.text-container p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.text-container a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 2px solid var(--primary-gold);
+    color: var(--primary-gold);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.text-container a:hover {
+    background-color: var(--primary-gold);
+    color: #fff;
+}
+
+/* Slide-in animations */
+@keyframes slideInLeft {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* Apply animation when the element becomes visible */
+.slide-in-left {
+    animation: slideInLeft 1s ease-out forwards;
+}
+
+.slide-in-right {
+    animation: slideInRight 1s ease-out forwards;
+}
+
+/* Initially hide elements */
+.service-box {
+    opacity: 0;
+    transform: translateX(0);
+}
+
+
+
+/* Contact Form Section */
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 20px;
+    align-items: flex-start;
+    background: #f7f7f7;
+}
+
+.contact-info {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-info h3 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: var(--primary-gold);
+}
+
+.contact-info p {
+    margin: 30px 0;
+    color: var(--primary-black);
+}
+
+.contact-form {
+    flex: 1;
+    margin-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid var(--primary-gold);
+    font-size: 1rem;
+    color: var(--primary-black);
+    outline: none;
+    transition: border 0.3s; 
+    background: #f7f7f7;
+}
+
+.contact-form input:hover,
+.contact-form textarea:hover {
+    border: 2px solid var(--primary-gold);
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"] {
+    width: 48%; 
+}
+
+.contact-form input.subject,
+.contact-form textarea {
+    width: 100%; 
+}
+
+.contact-form textarea {
+    min-height: 150px; 
+}
+
+/* Submit button */
+.contact-form button {
+    width: 100%; 
+    padding: 15px; 
+    background-color: var(--primary-black); 
+    color: var(--primary-gold); 
+    border: none; 
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s; 
+    font-size: 20px;
+}
+
+.contact-form button:hover {
+    background-color: var(--secondary-black); 
+}
+
+
+
+/* Adjust for different screen sizes */
+@media (max-width: 768px) {
+    .go-to-top {
+        bottom: 20px;
+        right: 10px;
+    }
+}
+
