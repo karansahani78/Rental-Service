@@ -1,9 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Get the selected plan from the URL
     const urlParams = new URLSearchParams(window.location.search);
     const selectedPlan = urlParams.get('plan');
 
-    // Plan details
     const plans = {
         "1": {
             name: "Tier 1",
@@ -25,10 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
-    // Get the selected plan details
     const plan = plans[selectedPlan] || plans["1"];
-
-    // Display the selected plan details
     const paymentDetailsDiv = document.getElementById('payment-details');
     paymentDetailsDiv.innerHTML = `
         <h2>${plan.name}</h2>
@@ -38,4 +33,33 @@ document.addEventListener('DOMContentLoaded', function() {
             ${plan.features.map(feature => `<li>• ${feature}</li>`).join('')}
         </ul>
     `;
+
+    // Handle "Select" button click
+    const selectButton = document.getElementById('select-plan');
+    if (selectButton) {
+        selectButton.addEventListener('click', function() {
+            // Check if the user is logged in
+            fetch('/users/check-session')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        alert('You need to log in first!');
+                        window.location.href = '/sign_in.html'; // Redirect to login page
+                    } else {
+                        // User is logged in, update subscription tier
+                        fetch(`/users/update-tier?tier=${selectedPlan}`, {
+                            method: 'POST',
+                        })
+                        .then(response => response.json())
+                        .then(responseData => {
+                            alert('Subscription tier updated successfully!');
+                            window.location.href = '/user_dashboard.html'; // Redirect to dashboard
+                        });
+                    }
+                })
+                .catch(error => {
+                    console.error('Error checking session:', error);
+                });
+        });
+    }
 });

@@ -21,7 +21,7 @@ fetch('header.html')
             const headerImage = `
                 <div class="header-image">
                     <div class="project-title">
-                        <h1 style="font-size: 85px !important; color: rgb(255, 255, 255);">Your1PropertyConnect</h1>
+                        <h1 style="font-size: 85px !important; color: rgb(230, 215, 231);">RentEasy</h1>
                     </div>
                     <div class="overlay">
                         <a class="btn" href="#">Talk to Us</a>

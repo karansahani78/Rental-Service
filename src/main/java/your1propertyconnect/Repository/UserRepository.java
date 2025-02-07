@@ -13,5 +13,6 @@ public interface UserRepository extends JpaRepository<User, Integer> {
 
     Optional<User> findByEmail(String email);
 
+
     // Default methods like save(), findAll(), etc. are not specified.
 }

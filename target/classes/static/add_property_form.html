@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Property</title>
+    <link rel="stylesheet" href="../css/form-style.css">
+    <meta name="description" content="Add a new property listing to the Property Connect platform.">
+</head>
+<body data-page="default">
+    <div id="header-placeholder"></div>
+    <script src="../js/insert_head_foot.js"></script>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <h1 class="text-center mb-5">Add New Property</h1>
+        <form id="propertyForm" action="/properties/add" method="POST" enctype="multipart/form-data">
+            <!-- Hidden User ID -->
+            <input type="hidden" name="userId" value="1"> <!-- Replace with dynamic user ID -->
+
+            <!-- Images Upload -->
+            <div class="form-group">
+                <label for="propertyImages">Upload Images:</label>
+                <input type="file" id="propertyImages" name="images" multiple class="form-control-file" accept="image/*">
+                <small class="form-text text-muted">You can upload multiple images (jpg, png, etc.).</small>
+            </div>
+
+            <!-- Title -->
+            <div class="form-group">
+                <label for="title">Property Title:</label>
+                <input type="text" id="title" name="title" class="form-control" placeholder="Enter the property title" required>
+            </div>
+
+            <!-- Price -->
+            <div class="form-group">
+                <label for="price">Price ($):</label>
+                <input type="number" step="0.01" id="price" name="price" class="form-control" placeholder="Enter the price" required>
+            </div>
+
+            <!-- Description -->
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" class="form-control" rows="4" placeholder="Provide a brief description of the property" required></textarea>
+            </div>
+
+            <!-- Property Type -->
+            <div class="form-group">
+                <label for="propertyType">Property Type:</label>
+                <select id="propertyType" name="propertyTypeName" class="form-control" required>
+                    <option value="" disabled selected>Loading property types...</option>
+                </select>
+            </div>
+
+
+            <!-- Bedrooms -->
+            <div class="form-group">
+                <label for="bedrooms">Bedrooms:</label>
+                <input type="number" id="bedrooms" name="bedrooms" class="form-control" step="1" placeholder="Enter the number of bedrooms" required>
+            </div>
+
+            <!-- Bathrooms -->
+            <div class="form-group">
+                <label for="bathrooms">Bathrooms:</label>
+                <input type="number" id="bathrooms" name="bathrooms" class="form-control" step="0.5" placeholder="Enter the number of bathrooms" required>
+            </div>
+
+            <!-- Area (sq ft) -->
+            <div class="form-group">
+                <label for="areaSqFt">Area (sq ft):</label>
+                <input type="number" id="areaSqFt" name="areaSqFt" class="form-control" step="0.1" placeholder="Enter the area in square feet" required>
+            </div>
+
+            <!-- Address Fields -->
+            <div class="form-group">
+                <label for="street">Street:</label>
+                <input type="text" id="street" name="street" class="form-control" placeholder="Enter the street" required>
+            </div>
+            <div class="form-group">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" class="form-control" placeholder="Enter the city" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="country">Country:</label>
+                <select id="country" name="country" class="form-control" required>
+                    <option value="" disabled selected>Loading countries...</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="province">State/Province:</label>
+                <select id="province" name="province" class="form-control" disabled required>
+                    <option value="" disabled selected>Select country first</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="postalCode">Postal Code:</label>
+                <input type="text" id="postalCode" name="postalCode" class="form-control" placeholder="Enter the postal code" required>
+            </div>
+
+            <!-- Status -->
+            <div class="form-group">
+                <label for="status">Status:</label>
+                <select id="status" name="status" class="form-control" required>
+                    <option value="available">Available</option>
+                    <option value="pending">Pending</option>
+                    <option value="sold">Sold</option>
+                    <option value="rented">Rented</option>
+                </select>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Submit Property</button>
+            </div>
+        </form>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- Link External JavaScript File -->
+    <script src="../js/add_property_form.js"></script>
+</body>
+</html>

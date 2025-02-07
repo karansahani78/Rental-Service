@@ -4,8 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.server.ResponseStatusException;
-
 import your1propertyconnect.Model.SubscriptionTier;
 import your1propertyconnect.Model.User;
 import your1propertyconnect.Service.UserService;

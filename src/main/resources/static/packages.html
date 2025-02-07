@@ -11,94 +11,110 @@
 <div id="header-placeholder"></div>
 <script src="../js/insert_head_foot.js"></script>
 
-    <main class="container my-5">
-        <!-- Main Heading -->
-        <div class="text-center mb-5">
-            <h1 class="display-4">Our Pricing Tiers</h1>
-        </div>
+<main class="container my-5">
+    <!-- Main Heading -->
+    <div class="text-center mb-5">
+        <h1 class="display-4">Our Pricing Tiers</h1>
+    </div>
 
-        <div class="row">
-            <!-- Tier 1 -->
-            <div class="col-md-4 col-sm-6 mb-4">
-                <div class="card pricing-card border-primary shadow-lg h-100 d-flex flex-column tier-1">
-                    <div class="card-header text-center bg-gradient-primary tier-header">
-                        <h2 class="font-weight-bold tier-title">Tier 1</h2>
-                        <h2 class="price-text mb-0 tier-price">$25</h2>
-                        <h4 class="text-muted tier-subtitle">per month</h4>
-                    </div>
-                    <div class="card-body d-flex flex-column">
-                        <p class="card-text">Perfect for those trying the system for the first time.</p>
-                        <h5 class="mt-3">Features:</h5>
-                        <ul class="list-unstyled">
-                            <li>• Listing placement on the site.</li>
-                            <li>• Personal identification number (PIN).</li>
-                            <li>• Access to over 15,000 viewers worldwide.</li>
-                            <li>• 5 free pictures.</li>
-                        </ul>
-                        <div class="mt-auto text-center">
-                            <a href="payment.html?plan=1" class="btn custom-btn">Select</a>
-                        </div>
-                    </div>
+    <div class="row">
+        <!-- Tier 1 -->
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card pricing-card border-primary shadow-lg h-100 d-flex flex-column">
+                <div class="card-header text-center bg-gradient-primary">
+                    <h2 class="font-weight-bold">Tier 1</h2>
+                    <h2 class="price-text mb-0">$25</h2>
+                    <h4 class="text-muted">per month</h4>
                 </div>
-            </div>
-
-            <!-- Tier 2 -->
-            <div class="col-md-4 col-sm-6 mb-4">
-                <div class="card pricing-card border-success shadow-lg h-100 d-flex flex-column tier-2">
-                    <div class="card-header text-center bg-gradient-success tier-header">
-                        <h2 class="font-weight-bold tier-title">Tier 2</h2>
-                        <h2 class="price-text mb-0 tier-price">$75</h2>
-                        <h4 class="text-muted tier-subtitle">per month</h4>
-                    </div>
-                    <div class="card-body d-flex flex-column">
-                        <p class="card-text">For those looking to target a specific audience.</p>
-                        <h5 class="mt-3">Features:</h5>
-                        <ul class="list-unstyled">
-                            <li>• Listing placement on the site.</li>
-                            <li>• Personal identification number (PIN).</li>
-                            <li>• Access to over 15,000 viewers worldwide.</li>
-                            <li>• Presence on social media accounts.</li>
-                            <li>• Monthly stats on views.</li>
-                            <li>• 8 free pictures.</li>
-                        </ul>
-                        <div class="mt-auto text-center">
-                            <a href="payment.html?plan=2" class="btn custom-btn">Select</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tier 3 -->
-            <div class="col-md-4 col-sm-6 mb-4">
-                <div class="card pricing-card border-info shadow-lg h-100 d-flex flex-column tier-3">
-                    <div class="card-header text-center bg-gradient-info tier-header">
-                        <h2 class="font-weight-bold tier-title">Tier 3</h2>
-                        <h2 class="price-text mb-0 tier-price">$100</h2>
-                        <h4 class="text-muted tier-subtitle">per month</h4>
-                    </div>
-                    <div class="card-body d-flex flex-column">
-                        <p class="card-text">For international real estate agents looking to connect with agents and clients worldwide.</p>
-                        <h5 class="mt-3">Features:</h5>
-                        <ul class="list-unstyled">
-                            <li>• Listing placement on the site.</li>
-                            <li>• Personal identification number (PIN).</li>
-                            <li>• Access to over 15,000 viewers worldwide.</li>
-                            <li>• Presence on social media accounts.</li>
-                            <li>• Bi-weekly stats on views.</li>
-                            <li>• Weekly boost to top of page for more viewership.</li>
-                            <li>• 12 free pictures.</li>
-                            <li>• Virtual tour.</li>
-                        </ul>
-                        <div class="mt-auto text-center">
-                            <a href="payment.html?plan=3" class="btn custom-btn">Select</a>
-                        </div>
+                <div class="card-body d-flex flex-column">
+                    <p>Perfect for those trying the system for the first time.</p>
+                    <h5>Features:</h5>
+                    <ul>
+                        <li>Listing placement on the site.</li>
+                        <li>Personal identification number (PIN).</li>
+                        <li>Access to over 15,000 viewers worldwide.</li>
+                        <li>5 free pictures.</li>
+                    </ul>
+                    <div class="mt-auto text-center">
+                        <button onclick="selectPlan(1)" class="btn btn-primary">Select</button>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
 
-    <footer id="footer-placeholder"></footer>
+        <!-- Tier 2 -->
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card pricing-card border-success shadow-lg h-100 d-flex flex-column">
+                <div class="card-header text-center bg-gradient-success">
+                    <h2 class="font-weight-bold">Tier 2</h2>
+                    <h2 class="price-text mb-0">$75</h2>
+                    <h4 class="text-muted">per month</h4>
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <p>For those looking to target a specific audience.</p>
+                    <h5>Features:</h5>
+                    <ul>
+                        <li>Listing placement on the site.</li>
+                        <li>Personal identification number (PIN).</li>
+                        <li>Access to over 15,000 viewers worldwide.</li>
+                        <li>Presence on social media accounts.</li>
+                        <li>Monthly stats on views.</li>
+                        <li>8 free pictures.</li>
+                    </ul>
+                    <div class="mt-auto text-center">
+                        <button onclick="selectPlan(2)" class="btn btn-success">Select</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <!-- Tier 3 -->
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card pricing-card border-info shadow-lg h-100 d-flex flex-column">
+                <div class="card-header text-center bg-gradient-info">
+                    <h2 class="font-weight-bold">Tier 3</h2>
+                    <h2 class="price-text mb-0">$100</h2>
+                    <h4 class="text-muted">per month</h4>
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <p>For international real estate agents looking to connect with agents and clients worldwide.</p>
+                    <h5>Features:</h5>
+                    <ul>
+                        <li>Listing placement on the site.</li>
+                        <li>Personal identification number (PIN).</li>
+                        <li>Access to over 15,000 viewers worldwide.</li>
+                        <li>Presence on social media accounts.</li>
+                        <li>Bi-weekly stats on views.</li>
+                        <li>Weekly boost to top of page for more viewership.</li>
+                        <li>12 free pictures.</li>
+                        <li>Virtual tour.</li>
+                    </ul>
+                    <div class="mt-auto text-center">
+                        <button onclick="selectPlan(3)" class="btn btn-info">Select</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer id="footer-placeholder"></footer>
+
+<script>
+    // Function to handle plan selection
+    function selectPlan(planId) {
+        fetch('/users/check-session', { method: 'GET' })
+            .then(response => {
+                if (response.ok) {
+                    // User is logged in, redirect to payment page with the selected plan
+                    window.location.href = `payment.html?plan=${planId}`;
+                } else {
+                    // Redirect to login page if not logged in
+                    window.location.href = '/sign_in.html?redirect=packages.html';
+                }
+            })
+            .catch(error => console.error('Error checking session:', error));
+    }
+</script>
 </body>
 </html>

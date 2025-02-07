@@ -7,62 +7,96 @@
     <link rel="stylesheet" href="../css/payment.css">
 </head>
 <body>
+<div id="header-placeholder"></div>
+<script src="../js/insert_head_foot.js"></script>
 
-    <div id="header-placeholder"></div>
-    <script src="../js/insert_head_foot.js"></script>
+<!-- Main Content -->
+<main class="container my-5">
+    <h1 class="text-center mb-5">Complete Your Payment</h1>
 
+    <!-- Plan Information -->
+    <div id="payment-details" class="bg-light p-4 rounded text-center mb-4">
+        <h2 id="plan-name"></h2>
+        <p id="plan-price"></p>
+    </div>
 
-    <!-- Main Content -->
-    <main class="container my-5">
-        <h1 class="text-center mb-5">Complete Your Payment</h1>
-
-        <!-- Plan Information -->
-        <div id="payment-details" class="bg-light p-4 rounded text-center mb-4">
-            <!-- Plan info filled by JavaScript -->
+    <!-- Payment Form -->
+    <form id="payment-form">
+        <div class="form-group">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" class="form-control" placeholder="Enter your full name" required>
         </div>
 
-        <!-- Payment Form -->
-        <form id="payment-form">
-            <div class="form-group">
-                <label for="fullName">Full Name:</label>
-                <input type="text" id="fullName" class="form-control" placeholder="Enter your full name" required>
+        <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="cardNumber">Card Number:</label>
+            <input type="text" id="cardNumber" class="form-control" placeholder="Card Number" required maxlength="16">
+        </div>
+
+        <div class="form-row">
+            <div class="col-md-6 mb-3">
+                <label for="expiryDate">Expiration Date:</label>
+                <input type="text" id="expiryDate" class="form-control" placeholder="MM/YY" required>
             </div>
-
-            <div class="form-group">
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+            <div class="col-md-6 mb-3">
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" class="form-control" placeholder="CVV" required maxlength="3">
             </div>
+        </div>
 
-            <div class="form-group">
-                <label for="cardNumber">Card Number:</label>
-                <input type="text" id="cardNumber" class="form-control" placeholder="Card Number" required maxlength="16">
-            </div>
+        <div class="form-group">
+            <label for="address">Billing Address:</label>
+            <input type="text" id="address" class="form-control" placeholder="Street Address" required>
+        </div>
 
-            <div class="form-row">
-                <div class="col-md-6 mb-3">
-                    <label for="expiryDate">Expiration Date:</label>
-                    <input type="text" id="expiryDate" class="form-control" placeholder="MM/YY" required>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <label for="cvv">CVV:</label>
-                    <input type="text" id="cvv" class="form-control" placeholder="CVV" required maxlength="3">
-                </div>
-            </div>
+        <div class="form-group">
+            <label for="postalCode">Postal Code:</label>
+            <input type="text" id="postalCode" class="form-control" placeholder="Postal Code" required>
+        </div>
 
-            <div class="form-group">
-                <label for="address">Billing Address:</label>
-                <input type="text" id="address" class="form-control" placeholder="Street Address" required>
-            </div>
+        <button type="button" class="btn btn-block mt-4" id="pay-now">Pay Now</button>
+    </form>
+</main>
 
-            <div class="form-group">
-                <label for="postalCode">Postal Code:</label>
-                <input type="text" id="postalCode" class="form-control" placeholder="Postal Code" required>
-            </div>
+<footer id="footer-placeholder"></footer>
 
-            <button type="button" class="btn btn-block mt-4" id="pay-now">Pay Now</button>
-        </form>
-    </main>
+<script>
+    // Check if user is logged in
+    fetch('/users/check-session', { method: 'GET' })
+        .then(response => {
+            if (!response.ok) {
+                // Redirect to login page if not logged in
+                window.location.href = '/sign_in.html?error=not_logged_in';
+            }
+        })
+        .catch(error => console.error('Error checking session:', error));
 
-    <footer id="footer-placeholder"></footer>
+    // Get plan details from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const planId = urlParams.get('plan');
+
+    const planDetails = {
+        "1": { name: "Basic Plan", price: "$10/month" },
+        "2": { name: "Standard Plan", price: "$20/month" },
+        "3": { name: "Premium Plan", price: "$30/month" }
+    };
+
+    if (planDetails[planId]) {
+        document.getElementById('plan-name').textContent = planDetails[planId].name;
+        document.getElementById('plan-price').textContent = planDetails[planId].price;
+    } else {
+        document.getElementById('payment-details').innerHTML = "<p>Invalid plan selected</p>";
+        document.getElementById('payment-form').style.display = "none";
+    }
+
+    // Handle Pay Now button click
+    document.getElementById('pay-now').addEventListener('click', () => {
+        alert('Payment processing is not implemented yet!');
+    });
+</script>
 </body>
 </html>
